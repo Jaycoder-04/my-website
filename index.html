@@ -2,60 +2,377 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>My Simple Website</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Amanda Nomfundo Dlamini ❤️</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
   <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: linear-gradient(to right, #0f172a, #1e293b);
-      color: white;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      text-align: center;
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family:'Poppins',sans-serif;
     }
 
-    .container {
-      max-width: 600px;
-      padding: 20px;
+    body{
+      background: linear-gradient(135deg,#ff4d6d,#590d22);
+      overflow-x:hidden;
+      color:white;
     }
 
-    h1 {
-      font-size: 3rem;
-      margin-bottom: 10px;
+    body::before{
+      content:'';
+      position:fixed;
+      width:500px;
+      height:500px;
+      background:#ff8fab;
+      border-radius:50%;
+      filter:blur(180px);
+      top:-100px;
+      left:-100px;
+      opacity:0.4;
     }
 
-    p {
-      font-size: 1.2rem;
-      color: #cbd5e1;
+    body::after{
+      content:'';
+      position:fixed;
+      width:500px;
+      height:500px;
+      background:#c9184a;
+      border-radius:50%;
+      filter:blur(180px);
+      bottom:-100px;
+      right:-100px;
+      opacity:0.4;
     }
 
-    button {
-      margin-top: 20px;
-      padding: 12px 24px;
-      border: none;
-      border-radius: 8px;
-      background: #38bdf8;
-      color: black;
-      font-size: 1rem;
-      cursor: pointer;
-      transition: 0.3s;
+    .container{
+      width:100%;
+      min-height:100vh;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      padding:40px 20px;
     }
 
-    button:hover {
-      background: #0ea5e9;
-      transform: scale(1.05);
+    .card{
+      width:100%;
+      max-width:1100px;
+      background:rgba(255,255,255,0.1);
+      border:1px solid rgba(255,255,255,0.2);
+      backdrop-filter:blur(15px);
+      border-radius:30px;
+      overflow:hidden;
+      box-shadow:0 10px 40px rgba(0,0,0,0.3);
+      animation:fadeIn 1.5s ease;
     }
+
+    .hero{
+      display:flex;
+      flex-wrap:wrap;
+      align-items:center;
+      justify-content:center;
+      padding:50px;
+      gap:40px;
+    }
+
+    .image-box{
+      flex:1;
+      min-width:300px;
+      display:flex;
+      justify-content:center;
+    }
+
+    .image-box img{
+      width:100%;
+      max-width:380px;
+      border-radius:25px;
+      object-fit:cover;
+      box-shadow:0 15px 40px rgba(0,0,0,0.4);
+      transition:0.4s;
+    }
+
+    .image-box img:hover{
+      transform:scale(1.03);
+    }
+
+    .content{
+      flex:1;
+      min-width:300px;
+    }
+
+    .content h1{
+      font-size:4rem;
+      line-height:1.1;
+      margin-bottom:20px;
+    }
+
+    .content span{
+      color:#ffd6e0;
+    }
+
+    .content p{
+      font-size:1.1rem;
+      line-height:1.9;
+      color:#ffe5ec;
+      margin-bottom:25px;
+    }
+
+    .btns{
+      display:flex;
+      gap:15px;
+      flex-wrap:wrap;
+    }
+
+    button{
+      padding:15px 30px;
+      border:none;
+      border-radius:50px;
+      font-size:1rem;
+      font-weight:bold;
+      cursor:pointer;
+      transition:0.3s;
+    }
+
+    .love-btn{
+      background:white;
+      color:#d90429;
+    }
+
+    .love-btn:hover{
+      transform:translateY(-4px);
+      background:#ffe5ec;
+    }
+
+    .music-btn{
+      background:#ff8fab;
+      color:white;
+    }
+
+    .music-btn:hover{
+      transform:translateY(-4px);
+    }
+
+    .section{
+      padding:60px 40px;
+    }
+
+    .section-title{
+      text-align:center;
+      margin-bottom:40px;
+      font-size:2.5rem;
+    }
+
+    .grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+      gap:25px;
+    }
+
+    .glass{
+      background:rgba(255,255,255,0.1);
+      padding:30px;
+      border-radius:20px;
+      transition:0.4s;
+      text-align:center;
+    }
+
+    .glass:hover{
+      transform:translateY(-8px);
+      background:rgba(255,255,255,0.18);
+    }
+
+    .glass h2{
+      margin-bottom:15px;
+      color:#fff;
+    }
+
+    .counter{
+      text-align:center;
+      padding:40px;
+      font-size:2rem;
+      font-weight:bold;
+      color:#fff0f3;
+    }
+
+    footer{
+      text-align:center;
+      padding:30px;
+      background:rgba(0,0,0,0.2);
+      color:#ffe5ec;
+    }
+
+    .hearts span{
+      position:fixed;
+      bottom:-50px;
+      animation:float 10s linear infinite;
+      font-size:25px;
+      opacity:0.7;
+    }
+
+    @keyframes float{
+      0%{
+        transform:translateY(0) rotate(0deg);
+        opacity:1;
+      }
+
+      100%{
+        transform:translateY(-120vh) rotate(360deg);
+        opacity:0;
+      }
+    }
+
+    @keyframes fadeIn{
+      from{
+        opacity:0;
+        transform:translateY(40px);
+      }
+
+      to{
+        opacity:1;
+        transform:translateY(0);
+      }
+    }
+
+    @media(max-width:768px){
+
+      .hero{
+        padding:30px 20px;
+      }
+
+      .content h1{
+        font-size:2.5rem;
+        text-align:center;
+      }
+
+      .content p{
+        text-align:center;
+      }
+
+      .btns{
+        justify-content:center;
+      }
+
+      .section{
+        padding:50px 20px;
+      }
+
+    }
+
   </style>
 </head>
+
 <body>
-  <div class="container">
-    <h1>Welcome to My Website</h1>
-    <p>This website is live on the internet and can be accessed from any device.</p>
-    <button onclick="showMessage()">Click Me</button>
+
+<div class="hearts">
+  <span style="left:10%; animation-delay:0s;">❤️</span>
+  <span style="left:20%; animation-delay:2s;">💕</span>
+  <span style="left:35%; animation-delay:4s;">💖</span>
+  <span style="left:50%; animation-delay:1s;">❤️</span>
+  <span style="left:70%; animation-delay:5s;">💘</span>
+  <span style="left:85%; animation-delay:3s;">💕</span>
+</div>
+
+<div class="container">
+
+  <div class="card">
+
+    <div class="hero">
+
+      <div class="image-box">
+        <img src="amanda.jpeg" alt="Amanda">
+      </div>
+
+      <div class="content">
+
+        <h1>
+          Amanda <br>
+          <span>Nomfundo Dlamini ❤️</span>
+        </h1>
+
+        <p>
+          Out of everyone in this world, you became my favorite person.
+          Your smile heals, your energy comforts, and your presence
+          makes life feel magical. This website is a small reflection
+          of how special you truly are to me.
+        </p>
+
+        <div class="btns">
+          <button class="love-btn" onclick="showLove()">
+            Click For Love ❤️
+          </button>
+
+          <button class="music-btn" onclick="playMusic()">
+            Play Music 🎵
+          </button>
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="counter">
+      Loving Amanda More Every Single Day ❤️
+    </div>
+
+    <section class="section">
+
+      <h1 class="section-title">
+        Why You're Amazing ✨
+      </h1>
+
+      <div class="grid">
+
+        <div class="glass">
+          <h2>Beautiful Soul 💕</h2>
+          <p>
+            Your kindness and softness make every moment peaceful.
+          </p>
+        </div>
+
+        <div class="glass">
+          <h2>Perfect Smile ❤️</h2>
+          <p>
+            Your smile honestly deserves its own holiday.
+          </p>
+        </div>
+
+        <div class="glass">
+          <h2>My Safe Place 💖</h2>
+          <p>
+            Talking to you feels like home no matter where I am.
+          </p>
+        </div>
+
+      </div>
+
+    </section>
+
+    <footer>
+      Made with endless love for Amanda Nomfundo Dlamini ❤️
+    </footer>
+
   </div>
 
-  <script>
+</div>
+
+<audio id="song">
+  <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+
+function showLove(){
+  alert("Amanda ❤️ You are genuinely the best thing that has ever happened to me.");
+}
+
+function playMusic(){
+  document.getElementById('song').play();
+}
+
+</script>
+
+</body>
 </html>
