@@ -1,375 +1,390 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Amanda Nomfundo Dlamini ❤️</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<title>Amanda Nomfundo Dlamini ❤️</title>
 
-  <style>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
-    *{
-      margin:0;
-      padding:0;
-      box-sizing:border-box;
-      font-family:'Poppins',sans-serif;
-    }
+<style>
 
-    body{
-      background: linear-gradient(135deg,#ff4d6d,#590d22);
-      overflow-x:hidden;
-      color:white;
-    }
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
 
-    body::before{
-      content:'';
-      position:fixed;
-      width:500px;
-      height:500px;
-      background:#ff8fab;
-      border-radius:50%;
-      filter:blur(180px);
-      top:-100px;
-      left:-100px;
-      opacity:0.4;
-    }
+body{
+background:linear-gradient(135deg,#ff4d6d,#590d22);
+overflow-x:hidden;
+color:white;
+min-height:100vh;
+position:relative;
+}
 
-    body::after{
-      content:'';
-      position:fixed;
-      width:500px;
-      height:500px;
-      background:#c9184a;
-      border-radius:50%;
-      filter:blur(180px);
-      bottom:-100px;
-      right:-100px;
-      opacity:0.4;
-    }
+body::before{
+content:'';
+position:fixed;
+width:500px;
+height:500px;
+background:#ff8fab;
+border-radius:50%;
+filter:blur(150px);
+top:-100px;
+left:-100px;
+opacity:0.4;
+z-index:-1;
+}
 
-    .container{
-      width:100%;
-      min-height:100vh;
-      display:flex;
-      justify-content:center;
-      align-items:center;
-      padding:40px 20px;
-    }
+body::after{
+content:'';
+position:fixed;
+width:500px;
+height:500px;
+background:#ff006e;
+border-radius:50%;
+filter:blur(150px);
+bottom:-100px;
+right:-100px;
+opacity:0.4;
+z-index:-1;
+}
 
-    .card{
-      width:100%;
-      max-width:1100px;
-      background:rgba(255,255,255,0.1);
-      border:1px solid rgba(255,255,255,0.2);
-      backdrop-filter:blur(15px);
-      border-radius:30px;
-      overflow:hidden;
-      box-shadow:0 10px 40px rgba(0,0,0,0.3);
-      animation:fadeIn 1.5s ease;
-    }
+.container{
+padding:30px;
+display:flex;
+justify-content:center;
+align-items:center;
+min-height:100vh;
+}
 
-    .hero{
-      display:flex;
-      flex-wrap:wrap;
-      align-items:center;
-      justify-content:center;
-      padding:50px;
-      gap:40px;
-    }
+.main-card{
+width:100%;
+max-width:1200px;
+background:rgba(255,255,255,0.1);
+backdrop-filter:blur(12px);
+border-radius:30px;
+overflow:hidden;
+box-shadow:0 15px 50px rgba(0,0,0,0.3);
+border:1px solid rgba(255,255,255,0.2);
+animation:fadeIn 1.5s ease;
+}
 
-    .image-box{
-      flex:1;
-      min-width:300px;
-      display:flex;
-      justify-content:center;
-    }
+.hero{
+display:flex;
+align-items:center;
+justify-content:center;
+flex-wrap:wrap;
+padding:50px;
+gap:50px;
+}
 
-    .image-box img{
-      width:100%;
-      max-width:380px;
-      border-radius:25px;
-      object-fit:cover;
-      box-shadow:0 15px 40px rgba(0,0,0,0.4);
-      transition:0.4s;
-    }
+.image-section{
+flex:1;
+display:flex;
+justify-content:center;
+min-width:300px;
+}
 
-    .image-box img:hover{
-      transform:scale(1.03);
-    }
+.image-section img{
+width:100%;
+max-width:400px;
+height:500px;
+object-fit:cover;
+border-radius:25px;
+box-shadow:0 15px 40px rgba(0,0,0,0.4);
+transition:0.4s;
+}
 
-    .content{
-      flex:1;
-      min-width:300px;
-    }
+.image-section img:hover{
+transform:scale(1.03);
+}
 
-    .content h1{
-      font-size:4rem;
-      line-height:1.1;
-      margin-bottom:20px;
-    }
+.text-section{
+flex:1;
+min-width:300px;
+}
 
-    .content span{
-      color:#ffd6e0;
-    }
+.text-section h1{
+font-size:4rem;
+line-height:1.1;
+margin-bottom:20px;
+}
 
-    .content p{
-      font-size:1.1rem;
-      line-height:1.9;
-      color:#ffe5ec;
-      margin-bottom:25px;
-    }
+.text-section span{
+color:#ffd6e0;
+}
 
-    .btns{
-      display:flex;
-      gap:15px;
-      flex-wrap:wrap;
-    }
+.text-section p{
+font-size:1.1rem;
+line-height:1.9;
+color:#ffe5ec;
+margin-bottom:25px;
+}
 
-    button{
-      padding:15px 30px;
-      border:none;
-      border-radius:50px;
-      font-size:1rem;
-      font-weight:bold;
-      cursor:pointer;
-      transition:0.3s;
-    }
+.buttons{
+display:flex;
+gap:15px;
+flex-wrap:wrap;
+}
 
-    .love-btn{
-      background:white;
-      color:#d90429;
-    }
+button{
+padding:15px 28px;
+border:none;
+border-radius:50px;
+cursor:pointer;
+font-size:1rem;
+font-weight:600;
+transition:0.3s;
+}
 
-    .love-btn:hover{
-      transform:translateY(-4px);
-      background:#ffe5ec;
-    }
+.love-btn{
+background:white;
+color:#d90429;
+}
 
-    .music-btn{
-      background:#ff8fab;
-      color:white;
-    }
+.music-btn{
+background:#ff8fab;
+color:white;
+}
 
-    .music-btn:hover{
-      transform:translateY(-4px);
-    }
+button:hover{
+transform:translateY(-5px);
+}
 
-    .section{
-      padding:60px 40px;
-    }
+.section{
+padding:60px 40px;
+}
 
-    .section-title{
-      text-align:center;
-      margin-bottom:40px;
-      font-size:2.5rem;
-    }
+.title{
+text-align:center;
+font-size:2.7rem;
+margin-bottom:40px;
+}
 
-    .grid{
-      display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-      gap:25px;
-    }
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+}
 
-    .glass{
-      background:rgba(255,255,255,0.1);
-      padding:30px;
-      border-radius:20px;
-      transition:0.4s;
-      text-align:center;
-    }
+.card{
+background:rgba(255,255,255,0.1);
+padding:30px;
+border-radius:25px;
+transition:0.4s;
+text-align:center;
+}
 
-    .glass:hover{
-      transform:translateY(-8px);
-      background:rgba(255,255,255,0.18);
-    }
+.card:hover{
+transform:translateY(-8px);
+background:rgba(255,255,255,0.18);
+}
 
-    .glass h2{
-      margin-bottom:15px;
-      color:#fff;
-    }
+.card h2{
+margin-bottom:15px;
+}
 
-    .counter{
-      text-align:center;
-      padding:40px;
-      font-size:2rem;
-      font-weight:bold;
-      color:#fff0f3;
-    }
+.quote{
+text-align:center;
+padding:50px 30px;
+font-size:1.7rem;
+font-weight:600;
+line-height:1.7;
+color:#fff0f3;
+}
 
-    footer{
-      text-align:center;
-      padding:30px;
-      background:rgba(0,0,0,0.2);
-      color:#ffe5ec;
-    }
+footer{
+text-align:center;
+padding:30px;
+background:rgba(0,0,0,0.2);
+font-size:1rem;
+color:#ffe5ec;
+}
 
-    .hearts span{
-      position:fixed;
-      bottom:-50px;
-      animation:float 10s linear infinite;
-      font-size:25px;
-      opacity:0.7;
-    }
+.hearts span{
+position:fixed;
+bottom:-50px;
+font-size:24px;
+animation:float 10s linear infinite;
+opacity:0.7;
+}
 
-    @keyframes float{
-      0%{
-        transform:translateY(0) rotate(0deg);
-        opacity:1;
-      }
+@keyframes float{
+0%{
+transform:translateY(0) rotate(0deg);
+opacity:1;
+}
 
-      100%{
-        transform:translateY(-120vh) rotate(360deg);
-        opacity:0;
-      }
-    }
+100%{
+transform:translateY(-120vh) rotate(360deg);
+opacity:0;
+}
+}
 
-    @keyframes fadeIn{
-      from{
-        opacity:0;
-        transform:translateY(40px);
-      }
+@keyframes fadeIn{
+from{
+opacity:0;
+transform:translateY(30px);
+}
 
-      to{
-        opacity:1;
-        transform:translateY(0);
-      }
-    }
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
 
-    @media(max-width:768px){
+@media(max-width:768px){
 
-      .hero{
-        padding:30px 20px;
-      }
+.hero{
+padding:30px 20px;
+}
 
-      .content h1{
-        font-size:2.5rem;
-        text-align:center;
-      }
+.text-section h1{
+font-size:2.5rem;
+text-align:center;
+}
 
-      .content p{
-        text-align:center;
-      }
+.text-section p{
+text-align:center;
+}
 
-      .btns{
-        justify-content:center;
-      }
+.buttons{
+justify-content:center;
+}
 
-      .section{
-        padding:50px 20px;
-      }
+.section{
+padding:50px 20px;
+}
 
-    }
+.title{
+font-size:2rem;
+}
 
-  </style>
+.quote{
+font-size:1.3rem;
+}
+
+}
+
+</style>
 </head>
 
 <body>
 
 <div class="hearts">
-  <span style="left:10%; animation-delay:0s;">❤️</span>
-  <span style="left:20%; animation-delay:2s;">💕</span>
-  <span style="left:35%; animation-delay:4s;">💖</span>
-  <span style="left:50%; animation-delay:1s;">❤️</span>
-  <span style="left:70%; animation-delay:5s;">💘</span>
-  <span style="left:85%; animation-delay:3s;">💕</span>
+<span style="left:10%;animation-delay:0s;">❤️</span>
+<span style="left:20%;animation-delay:2s;">💕</span>
+<span style="left:40%;animation-delay:4s;">💖</span>
+<span style="left:60%;animation-delay:1s;">❤️</span>
+<span style="left:80%;animation-delay:3s;">💘</span>
 </div>
 
 <div class="container">
 
-  <div class="card">
+<div class="main-card">
 
-    <div class="hero">
+<div class="hero">
 
-      <div class="image-box">
-        <img src="amanda.jpeg" alt="Amanda">
-      </div>
+<div class="image-section">
+<img src="amanda.jpeg" alt="Amanda">
+</div>
 
-      <div class="content">
+<div class="text-section">
 
-        <h1>
-          Amanda <br>
-          <span>Nomfundo Dlamini ❤️</span>
-        </h1>
+<h1>
+Amanda <br>
+<span>Nomfundo Dlamini ❤️</span>
+</h1>
 
-        <p>
-          Out of everyone in this world, you became my favorite person.
-          Your smile heals, your energy comforts, and your presence
-          makes life feel magical. This website is a small reflection
-          of how special you truly are to me.
-        </p>
+<p>
+Out of all the beautiful people in this world,
+you became my favorite. Your smile calms my chaos,
+your voice feels like peace, and your presence makes
+everything brighter. This website is just a little
+piece of how much you truly mean to me.
+</p>
 
-        <div class="btns">
-          <button class="love-btn" onclick="showLove()">
-            Click For Love ❤️
-          </button>
+<div class="buttons">
 
-          <button class="music-btn" onclick="playMusic()">
-            Play Music 🎵
-          </button>
-        </div>
+<button class="love-btn" onclick="showLove()">
+Click For Love ❤️
+</button>
 
-      </div>
+<button class="music-btn" onclick="playMusic()">
+Play Music 🎵
+</button>
 
-    </div>
+</div>
 
-    <div class="counter">
-      Loving Amanda More Every Single Day ❤️
-    </div>
+</div>
 
-    <section class="section">
+</div>
 
-      <h1 class="section-title">
-        Why You're Amazing ✨
-      </h1>
+<div class="quote">
+“You are my today and all of my tomorrows.” ❤️
+</div>
 
-      <div class="grid">
+<section class="section">
 
-        <div class="glass">
-          <h2>Beautiful Soul 💕</h2>
-          <p>
-            Your kindness and softness make every moment peaceful.
-          </p>
-        </div>
+<h1 class="title">
+Why I Adore You ✨
+</h1>
 
-        <div class="glass">
-          <h2>Perfect Smile ❤️</h2>
-          <p>
-            Your smile honestly deserves its own holiday.
-          </p>
-        </div>
+<div class="grid">
 
-        <div class="glass">
-          <h2>My Safe Place 💖</h2>
-          <p>
-            Talking to you feels like home no matter where I am.
-          </p>
-        </div>
+<div class="card">
+<h2>Beautiful Soul 💕</h2>
+<p>
+Your kindness and energy make every moment feel warm and safe.
+</p>
+</div>
 
-      </div>
+<div class="card">
+<h2>Perfect Smile ❤️</h2>
+<p>
+That smile of yours deserves to be protected at all costs.
+</p>
+</div>
 
-    </section>
+<div class="card">
+<h2>My Peace 💖</h2>
+<p>
+Even on difficult days, talking to you makes everything better.
+</p>
+</div>
 
-    <footer>
-      Made with endless love for Amanda Nomfundo Dlamini ❤️
-    </footer>
+</div>
 
-  </div>
+</section>
+
+<footer>
+Made with endless love for Amanda Nomfundo Dlamini ❤️
+</footer>
+
+</div>
 
 </div>
 
 <audio id="song">
-  <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+<source src="https://cdn.pixabay.com/download/audio/2022/03/15/audio_c8c8a73467.mp3?filename=romantic-love-11786.mp3" type="audio/mpeg">
 </audio>
 
 <script>
 
 function showLove(){
-  alert("Amanda ❤️ You are genuinely the best thing that has ever happened to me.");
+alert("Amanda ❤️ You are genuinely the best thing that has ever happened to me.");
 }
 
 function playMusic(){
-  document.getElementById('song').play();
+
+let song = document.getElementById("song");
+
+song.play();
+
 }
 
 </script>
