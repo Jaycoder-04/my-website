@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Amanda Nomfundo Dlamini ❤️</title>
+<title>Joel ❤️ Amanda</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
 
@@ -15,27 +16,27 @@ margin:0;
 padding:0;
 box-sizing:border-box;
 font-family:'Poppins',sans-serif;
+scroll-behavior:smooth;
 }
 
 body{
-background:linear-gradient(135deg,#ff4d6d,#590d22);
+background:#0f0f0f;
 overflow-x:hidden;
 color:white;
-min-height:100vh;
-position:relative;
 }
+
+/* BACKGROUND GLOW */
 
 body::before{
 content:'';
 position:fixed;
 width:500px;
 height:500px;
-background:#ff8fab;
-border-radius:50%;
-filter:blur(150px);
-top:-100px;
-left:-100px;
-opacity:0.4;
+background:#ff006e;
+filter:blur(180px);
+top:-150px;
+left:-150px;
+opacity:0.3;
 z-index:-1;
 }
 
@@ -44,95 +45,107 @@ content:'';
 position:fixed;
 width:500px;
 height:500px;
-background:#ff006e;
-border-radius:50%;
-filter:blur(150px);
-bottom:-100px;
-right:-100px;
-opacity:0.4;
+background:#8338ec;
+filter:blur(180px);
+bottom:-150px;
+right:-150px;
+opacity:0.3;
 z-index:-1;
 }
 
-.container{
-padding:30px;
+/* NAVBAR */
+
+nav{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+padding:18px 8%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+background:rgba(0,0,0,0.3);
+backdrop-filter:blur(15px);
+z-index:1000;
+border-bottom:1px solid rgba(255,255,255,0.1);
+}
+
+.logo{
+font-size:1.6rem;
+font-weight:700;
+color:#ff4d6d;
+}
+
+nav ul{
+display:flex;
+gap:25px;
+list-style:none;
+}
+
+nav ul li a{
+text-decoration:none;
+color:white;
+font-weight:500;
+transition:0.3s;
+}
+
+nav ul li a:hover{
+color:#ff4d6d;
+}
+
+/* HERO */
+
+.hero{
+min-height:100vh;
 display:flex;
 justify-content:center;
 align-items:center;
-min-height:100vh;
+padding:120px 8% 80px;
+gap:70px;
+flex-wrap:wrap;
 }
 
-.main-card{
-width:100%;
-max-width:1200px;
-background:rgba(255,255,255,0.1);
-backdrop-filter:blur(12px);
-border-radius:30px;
-overflow:hidden;
-box-shadow:0 15px 50px rgba(0,0,0,0.3);
-border:1px solid rgba(255,255,255,0.2);
+.hero-left{
+flex:1;
+min-width:320px;
 animation:fadeIn 1.5s ease;
 }
 
-.hero{
-display:flex;
-align-items:center;
-justify-content:center;
-flex-wrap:wrap;
-padding:50px;
-gap:50px;
-}
-
-.image-section{
-flex:1;
-display:flex;
-justify-content:center;
-min-width:300px;
-}
-
-.image-section img{
-width:100%;
-max-width:400px;
-height:500px;
-object-fit:cover;
-border-radius:25px;
-box-shadow:0 15px 40px rgba(0,0,0,0.4);
-transition:0.4s;
-}
-
-.image-section img:hover{
-transform:scale(1.03);
-}
-
-.text-section{
-flex:1;
-min-width:300px;
-}
-
-.text-section h1{
-font-size:4rem;
+.hero-left h1{
+font-size:4.5rem;
 line-height:1.1;
 margin-bottom:20px;
 }
 
-.text-section span{
-color:#ffd6e0;
+.hero-left span{
+color:#ff4d6d;
 }
 
-.text-section p{
+.typing{
+font-size:1.3rem;
+color:#ccc;
+margin-bottom:25px;
+min-height:40px;
+}
+
+.hero-left p{
 font-size:1.1rem;
 line-height:1.9;
-color:#ffe5ec;
-margin-bottom:25px;
+color:#ddd;
+max-width:650px;
+margin-bottom:35px;
 }
+
+/* BUTTONS */
 
 .buttons{
 display:flex;
-gap:15px;
+gap:20px;
 flex-wrap:wrap;
 }
 
-button{
-padding:15px 28px;
+.btn{
+padding:16px 32px;
 border:none;
 border-radius:50px;
 cursor:pointer;
@@ -141,69 +154,166 @@ font-weight:600;
 transition:0.3s;
 }
 
-.love-btn{
-background:white;
-color:#d90429;
-}
-
-.music-btn{
-background:#ff8fab;
+.primary{
+background:linear-gradient(45deg,#ff006e,#ff4d6d);
 color:white;
+box-shadow:0 10px 30px rgba(255,0,110,0.4);
 }
 
-button:hover{
-transform:translateY(-5px);
+.secondary{
+background:white;
+color:#111;
 }
 
-.section{
-padding:60px 40px;
+.btn:hover{
+transform:translateY(-6px) scale(1.03);
+}
+
+/* IMAGE */
+
+.hero-right{
+flex:1;
+display:flex;
+justify-content:center;
+align-items:center;
+min-width:320px;
+animation:fadeIn 2s ease;
+}
+
+.image-container{
+position:relative;
+width:420px;
+height:540px;
+border-radius:35px;
+overflow:hidden;
+box-shadow:0 25px 50px rgba(0,0,0,0.5);
+}
+
+.image-container::before{
+content:'';
+position:absolute;
+inset:0;
+background:linear-gradient(to top,rgba(0,0,0,0.5),transparent);
+z-index:1;
+}
+
+.image-container img{
+width:100%;
+height:100%;
+object-fit:cover;
+transition:0.5s;
+}
+
+.image-container:hover img{
+transform:scale(1.05);
+}
+
+.image-text{
+position:absolute;
+bottom:25px;
+left:25px;
+z-index:2;
+}
+
+.image-text h2{
+font-size:2rem;
+}
+
+.image-text p{
+color:#eee;
+}
+
+/* LOVE COUNTER */
+
+.counter-section{
+padding:80px 8%;
+display:flex;
+justify-content:center;
+}
+
+.counter-card{
+width:100%;
+max-width:900px;
+padding:50px;
+border-radius:35px;
+background:rgba(255,255,255,0.08);
+backdrop-filter:blur(15px);
+text-align:center;
+border:1px solid rgba(255,255,255,0.1);
+}
+
+.counter-card h2{
+font-size:4rem;
+color:#ff4d6d;
+margin-bottom:10px;
+}
+
+.counter-card p{
+font-size:1.2rem;
+color:#ddd;
+}
+
+.since-date{
+margin-top:20px;
+font-size:1.2rem;
+color:#ff8fa3;
+font-weight:500;
+}
+
+/* CARDS */
+
+.features{
+padding:40px 8% 100px;
 }
 
 .title{
 text-align:center;
-font-size:2.7rem;
-margin-bottom:40px;
+font-size:3rem;
+margin-bottom:60px;
+color:#ff4d6d;
 }
 
 .grid{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:25px;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:30px;
 }
 
 .card{
-background:rgba(255,255,255,0.1);
-padding:30px;
-border-radius:25px;
+background:rgba(255,255,255,0.07);
+padding:35px;
+border-radius:30px;
 transition:0.4s;
-text-align:center;
+backdrop-filter:blur(10px);
+border:1px solid rgba(255,255,255,0.08);
 }
 
 .card:hover{
-transform:translateY(-8px);
-background:rgba(255,255,255,0.18);
+transform:translateY(-10px);
+background:rgba(255,255,255,0.12);
 }
 
-.card h2{
+.card h3{
+font-size:1.5rem;
 margin-bottom:15px;
+color:#ff8fa3;
 }
 
-.quote{
-text-align:center;
-padding:50px 30px;
-font-size:1.7rem;
-font-weight:600;
-line-height:1.7;
-color:#fff0f3;
+.card p{
+line-height:1.8;
+color:#ddd;
 }
+
+/* FOOTER */
 
 footer{
+padding:40px;
 text-align:center;
-padding:30px;
-background:rgba(0,0,0,0.2);
-font-size:1rem;
-color:#ffe5ec;
+background:#111;
+color:#aaa;
 }
+
+/* FLOATING HEARTS */
 
 .hearts span{
 position:fixed;
@@ -211,6 +321,7 @@ bottom:-50px;
 font-size:24px;
 animation:float 10s linear infinite;
 opacity:0.7;
+z-index:-1;
 }
 
 @keyframes float{
@@ -228,7 +339,7 @@ opacity:0;
 @keyframes fadeIn{
 from{
 opacity:0;
-transform:translateY(30px);
+transform:translateY(40px);
 }
 
 to{
@@ -237,40 +348,50 @@ transform:translateY(0);
 }
 }
 
-@media(max-width:768px){
+/* MOBILE */
+
+@media(max-width:900px){
 
 .hero{
-padding:30px 20px;
-}
-
-.text-section h1{
-font-size:2.5rem;
+padding-top:140px;
 text-align:center;
 }
 
-.text-section p{
-text-align:center;
+.hero-left h1{
+font-size:3rem;
 }
 
 .buttons{
 justify-content:center;
 }
 
-.section{
-padding:50px 20px;
+.image-container{
+width:100%;
+max-width:360px;
+height:500px;
 }
 
 .title{
-font-size:2rem;
+font-size:2.3rem;
 }
 
-.quote{
-font-size:1.3rem;
+.counter-card h2{
+font-size:3rem;
+}
+
+nav{
+padding:15px 5%;
+}
+
+nav ul{
+gap:15px;
+font-size:0.9rem;
 }
 
 }
 
 </style>
+
 </head>
 
 <body>
@@ -278,43 +399,56 @@ font-size:1.3rem;
 <div class="hearts">
 <span style="left:10%;animation-delay:0s;">❤️</span>
 <span style="left:20%;animation-delay:2s;">💕</span>
-<span style="left:40%;animation-delay:4s;">💖</span>
-<span style="left:60%;animation-delay:1s;">❤️</span>
-<span style="left:80%;animation-delay:3s;">💘</span>
+<span style="left:35%;animation-delay:4s;">💖</span>
+<span style="left:50%;animation-delay:1s;">❤️</span>
+<span style="left:70%;animation-delay:5s;">💘</span>
+<span style="left:85%;animation-delay:3s;">💕</span>
 </div>
 
-<div class="container">
+<!-- NAVBAR -->
 
-<div class="main-card">
+<nav>
 
-<div class="hero">
-
-<div class="image-section">
-<img src="amanda.jpeg" alt="Amanda">
+<div class="logo">
+Joel ❤️ Amanda
 </div>
 
-<div class="text-section">
+<ul>
+<li><a href="index.html">Home</a></li>
+<li><a href="story.html">Story</a></li>
+<li><a href="gallery.html">Gallery</a></li>
+<li><a href="letter.html">Letter</a></li>
+</ul>
+
+</nav>
+
+<!-- HERO -->
+
+<section class="hero">
+
+<div class="hero-left">
 
 <h1>
-Amanda <br>
-<span>Nomfundo Dlamini ❤️</span>
+Joel Mohau <br>
+<span>& Amanda Dlamini ❤️</span>
 </h1>
 
+<div class="typing" id="typing"></div>
+
 <p>
-Out of all the beautiful people in this world,
-you became my favorite. Your smile calms my chaos,
-your voice feels like peace, and your presence makes
-everything brighter. This website is just a little
-piece of how much you truly mean to me.
+Some people search forever for genuine connection,
+but somehow life allowed me to meet someone as beautiful,
+warm and unforgettable as you. Every memory with you
+feels like something worth keeping forever.
 </p>
 
 <div class="buttons">
 
-<button class="love-btn" onclick="showLove()">
+<button class="btn primary" onclick="showLove()">
 Click For Love ❤️
 </button>
 
-<button class="music-btn" onclick="playMusic()">
+<button class="btn secondary" onclick="playMusic()">
 Play Music 🎵
 </button>
 
@@ -322,38 +456,71 @@ Play Music 🎵
 
 </div>
 
+<div class="hero-right">
+
+<div class="image-container">
+
+<img src="amanda1.jpeg" alt="Amanda">
+
+<div class="image-text">
+<h2>Amanda ❤️</h2>
+<p>My favorite person.</p>
 </div>
 
-<div class="quote">
-“You are my today and all of my tomorrows.” ❤️
 </div>
 
-<section class="section">
+</div>
+
+</section>
+
+<!-- COUNTER -->
+
+<section class="counter-section">
+
+<div class="counter-card">
+
+<h2 id="days">0 ❤️</h2>
+
+<p>
+Loving Amanda more every single day.
+</p>
+
+<div class="since-date">
+Together Since ❤️ 14 November 2025
+</div>
+
+</div>
+
+</section>
+
+<!-- FEATURES -->
+
+<section class="features">
 
 <h1 class="title">
-Why I Adore You ✨
+Why You're Special ✨
 </h1>
 
 <div class="grid">
 
 <div class="card">
-<h2>Beautiful Soul 💕</h2>
+<h3>Beautiful Soul 💕</h3>
 <p>
-Your kindness and energy make every moment feel warm and safe.
+Your kindness and personality make every moment feel peaceful and warm.
 </p>
 </div>
 
 <div class="card">
-<h2>Perfect Smile ❤️</h2>
+<h3>Perfect Smile ❤️</h3>
 <p>
-That smile of yours deserves to be protected at all costs.
+That smile genuinely deserves protection at all costs.
 </p>
 </div>
 
 <div class="card">
-<h2>My Peace 💖</h2>
+<h3>Safe Place 💖</h3>
 <p>
-Even on difficult days, talking to you makes everything better.
+No matter how stressful life gets, talking to you makes everything feel lighter.
 </p>
 </div>
 
@@ -362,12 +529,10 @@ Even on difficult days, talking to you makes everything better.
 </section>
 
 <footer>
-Made with endless love for Amanda Nomfundo Dlamini ❤️
+Made with endless love by Joel Mohau for Amanda Nomfundo Dlamini ❤️
 </footer>
 
-</div>
-
-</div>
+<!-- MUSIC -->
 
 <audio id="song">
 <source src="https://cdn.pixabay.com/download/audio/2022/03/15/audio_c8c8a73467.mp3?filename=romantic-love-11786.mp3" type="audio/mpeg">
@@ -375,9 +540,13 @@ Made with endless love for Amanda Nomfundo Dlamini ❤️
 
 <script>
 
+/* LOVE ALERT */
+
 function showLove(){
 alert("Amanda ❤️ You are genuinely the best thing that has ever happened to me.");
 }
+
+/* MUSIC */
 
 function playMusic(){
 
@@ -386,6 +555,58 @@ let song = document.getElementById("song");
 song.play();
 
 }
+
+/* LOVE COUNTER */
+
+let startDate = new Date("2025-11-14");
+
+let today = new Date();
+
+let difference = today - startDate;
+
+let days = Math.floor(difference / (1000 * 60 * 60 * 24));
+
+document.getElementById("days").innerHTML = days + " Days ❤️";
+
+/* TYPING EFFECT */
+
+const text = [
+"Forever starts with you ❤️",
+"You make life feel beautiful ✨",
+"My favorite human forever 💕"
+];
+
+let count = 0;
+let index = 0;
+let currentText = '';
+let letter = '';
+
+(function type(){
+
+if(count === text.length){
+count = 0;
+}
+
+currentText = text[count];
+
+letter = currentText.slice(0, ++index);
+
+document.getElementById('typing').textContent = letter;
+
+if(letter.length === currentText.length){
+
+count++;
+index = 0;
+
+setTimeout(type, 2000);
+
+}else{
+
+setTimeout(type, 80);
+
+}
+
+})();
 
 </script>
 

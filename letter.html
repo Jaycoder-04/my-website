@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Letter To Amanda ❤️</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+scroll-behavior:smooth;
+}
+
+body{
+background:#0f0f0f;
+overflow-x:hidden;
+color:white;
+}
+
+/* BACKGROUND GLOW */
+
+body::before{
+content:'';
+position:fixed;
+width:500px;
+height:500px;
+background:#ff006e;
+filter:blur(180px);
+top:-150px;
+left:-150px;
+opacity:0.25;
+z-index:-1;
+}
+
+body::after{
+content:'';
+position:fixed;
+width:500px;
+height:500px;
+background:#8338ec;
+filter:blur(180px);
+bottom:-150px;
+right:-150px;
+opacity:0.25;
+z-index:-1;
+}
+
+/* NAVBAR */
+
+nav{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+padding:18px 8%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+background:rgba(0,0,0,0.35);
+backdrop-filter:blur(15px);
+z-index:1000;
+border-bottom:1px solid rgba(255,255,255,0.08);
+}
+
+.logo{
+font-size:1.5rem;
+font-weight:700;
+color:#ff4d6d;
+}
+
+nav ul{
+display:flex;
+gap:25px;
+list-style:none;
+}
+
+nav ul li a{
+text-decoration:none;
+color:white;
+font-weight:500;
+transition:0.3s;
+}
+
+nav ul li a:hover{
+color:#ff4d6d;
+}
+
+/* HERO */
+
+.hero{
+padding-top:150px;
+padding-bottom:60px;
+text-align:center;
+animation:fadeDown 1s ease;
+}
+
+.hero h1{
+font-size:4rem;
+color:#ff4d6d;
+margin-bottom:15px;
+}
+
+.hero p{
+font-size:1.1rem;
+color:#ccc;
+}
+
+/* LETTER */
+
+.letter-section{
+padding:20px 8% 100px;
+display:flex;
+justify-content:center;
+}
+
+.letter-card{
+width:100%;
+max-width:900px;
+background:rgba(255,255,255,0.06);
+backdrop-filter:blur(12px);
+padding:60px;
+border-radius:35px;
+border:1px solid rgba(255,255,255,0.08);
+box-shadow:0 20px 50px rgba(0,0,0,0.4);
+animation:fadeUp 1.2s ease;
+position:relative;
+overflow:hidden;
+}
+
+.letter-card::before{
+content:'❤️';
+position:absolute;
+font-size:150px;
+opacity:0.05;
+right:20px;
+top:10px;
+}
+
+.letter-card h2{
+font-size:2rem;
+margin-bottom:25px;
+color:#ff8fa3;
+}
+
+.letter-card p{
+font-size:1.08rem;
+line-height:2.1;
+color:#eee;
+margin-bottom:20px;
+}
+
+/* QUOTE */
+
+.quote{
+margin-top:40px;
+padding:25px;
+border-left:4px solid #ff4d6d;
+background:rgba(255,255,255,0.04);
+border-radius:15px;
+font-style:italic;
+color:#ffd6e0;
+}
+
+/* BUTTON */
+
+.center{
+text-align:center;
+margin-top:40px;
+}
+
+button{
+padding:16px 35px;
+border:none;
+border-radius:50px;
+background:linear-gradient(45deg,#ff006e,#ff4d6d);
+color:white;
+font-size:1rem;
+font-weight:600;
+cursor:pointer;
+transition:0.3s;
+box-shadow:0 10px 30px rgba(255,0,110,0.3);
+}
+
+button:hover{
+transform:translateY(-5px) scale(1.03);
+}
+
+/* FOOTER */
+
+footer{
+padding:35px;
+text-align:center;
+background:#111;
+color:#aaa;
+}
+
+/* ANIMATIONS */
+
+@keyframes fadeUp{
+
+from{
+opacity:0;
+transform:translateY(40px);
+}
+
+to{
+opacity:1;
+transform:translateY(0);
+}
+
+}
+
+@keyframes fadeDown{
+
+from{
+opacity:0;
+transform:translateY(-40px);
+}
+
+to{
+opacity:1;
+transform:translateY(0);
+}
+
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+.hero h1{
+font-size:2.7rem;
+}
+
+.hero p{
+font-size:1rem;
+padding:0 10px;
+}
+
+.letter-card{
+padding:35px 25px;
+}
+
+.letter-card h2{
+font-size:1.6rem;
+}
+
+.letter-card p{
+font-size:1rem;
+line-height:1.9;
+}
+
+nav{
+padding:15px 5%;
+}
+
+nav ul{
+gap:15px;
+font-size:0.9rem;
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+
+<nav>
+
+<div class="logo">
+Joel ❤️ Amanda
+</div>
+
+<ul>
+<li><a href="index.html">Home</a></li>
+<li><a href="story.html">Story</a></li>
+<li><a href="gallery.html">Gallery</a></li>
+<li><a href="letter.html">Letter</a></li>
+</ul>
+
+</nav>
+
+<!-- HERO -->
+
+<section class="hero">
+
+<h1>
+A Letter To Amanda 💌
+</h1>
+
+<p>
+Some feelings are too beautiful to keep silent.
+</p>
+
+</section>
+
+<!-- LETTER -->
+
+<section class="letter-section">
+
+<div class="letter-card">
+
+<h2>
+My Favorite Person ❤️
+</h2>
+
+<p>
+Amanda…
+</p>
+
+<p>
+I genuinely hope you never forget how special you are.
+Not just because of your beauty,
+but because of the warmth you carry naturally.
+Your energy has a way of making everything feel softer,
+safer and more peaceful.
+</p>
+
+<p>
+You became one of the very few people capable of making ordinary moments feel unforgettable.
+Even the smallest conversations with you somehow stay in my mind longer than they should.
+That smile of yours alone can completely change the mood of an entire day.
+</p>
+
+<p>
+There’s something rare about you.
+Something comforting.
+Something beautiful that’s difficult to explain properly with words.
+And honestly…
+that’s what makes you unforgettable.
+</p>
+
+<p>
+No matter where life takes us,
+there will always be a part of me that smiles simply because you existed in my world.
+Thank you for being yourself.
+Thank you for being someone worth appreciating deeply.
+</p>
+
+<div class="quote">
+“You are not just someone I love…
+you are someone my heart feels safe with.” ❤️
+</div>
+
+<div class="center">
+
+<button onclick="showMessage()">
+Click Here ❤️
+</button>
+
+</div>
+
+</div>
+
+</section>
+
+<footer>
+Made with endless love by Joel Mohau ❤️
+</footer>
+
+<script>
+
+function showMessage(){
+
+alert("Amanda ❤️ You will always be one of the most beautiful parts of my life.");
+
+}
+
+</script>
+
+</body>
+</html>

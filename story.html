@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Our Story ❤️</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+background:#0f0f0f;
+color:white;
+overflow-x:hidden;
+}
+
+/* BACKGROUND GLOW */
+
+body::before{
+content:'';
+position:fixed;
+width:450px;
+height:450px;
+background:#ff006e;
+filter:blur(180px);
+top:-120px;
+left:-120px;
+opacity:0.25;
+z-index:-1;
+}
+
+body::after{
+content:'';
+position:fixed;
+width:450px;
+height:450px;
+background:#8338ec;
+filter:blur(180px);
+bottom:-120px;
+right:-120px;
+opacity:0.25;
+z-index:-1;
+}
+
+/* NAVBAR */
+
+nav{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+padding:18px 8%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+background:rgba(0,0,0,0.35);
+backdrop-filter:blur(15px);
+z-index:1000;
+border-bottom:1px solid rgba(255,255,255,0.08);
+}
+
+.logo{
+font-size:1.5rem;
+font-weight:700;
+color:#ff4d6d;
+}
+
+nav ul{
+display:flex;
+gap:25px;
+list-style:none;
+}
+
+nav ul li a{
+text-decoration:none;
+color:white;
+transition:0.3s;
+}
+
+nav ul li a:hover{
+color:#ff4d6d;
+}
+
+/* HERO */
+
+.hero{
+padding-top:140px;
+padding-bottom:60px;
+text-align:center;
+}
+
+.hero h1{
+font-size:4rem;
+margin-bottom:15px;
+color:#ff4d6d;
+animation:fadeDown 1s ease;
+}
+
+.hero p{
+font-size:1.1rem;
+color:#ccc;
+animation:fadeDown 1.4s ease;
+}
+
+/* STORY CARDS */
+
+.story-section{
+padding:20px 8% 100px;
+}
+
+.story-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:35px;
+}
+
+.story-card{
+background:rgba(255,255,255,0.06);
+padding:40px;
+border-radius:30px;
+backdrop-filter:blur(12px);
+border:1px solid rgba(255,255,255,0.08);
+transition:0.4s;
+box-shadow:0 15px 40px rgba(0,0,0,0.35);
+animation:fadeUp 1s ease;
+}
+
+.story-card:hover{
+transform:translateY(-12px);
+background:rgba(255,255,255,0.1);
+}
+
+.story-card h2{
+font-size:1.6rem;
+margin-bottom:18px;
+color:#ff8fa3;
+}
+
+.story-card p{
+line-height:1.9;
+color:#ddd;
+}
+
+/* LOVE QUOTE */
+
+.quote{
+margin-top:70px;
+text-align:center;
+font-size:1.6rem;
+font-weight:600;
+color:#fff;
+line-height:1.8;
+animation:fadeUp 1.5s ease;
+}
+
+/* FOOTER */
+
+footer{
+padding:35px;
+text-align:center;
+background:#111;
+color:#aaa;
+}
+
+/* ANIMATIONS */
+
+@keyframes fadeUp{
+
+from{
+opacity:0;
+transform:translateY(40px);
+}
+
+to{
+opacity:1;
+transform:translateY(0);
+}
+
+}
+
+@keyframes fadeDown{
+
+from{
+opacity:0;
+transform:translateY(-40px);
+}
+
+to{
+opacity:1;
+transform:translateY(0);
+}
+
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+.hero h1{
+font-size:2.7rem;
+}
+
+nav{
+padding:15px 5%;
+}
+
+nav ul{
+gap:15px;
+font-size:0.9rem;
+}
+
+.quote{
+font-size:1.2rem;
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<nav>
+
+<div class="logo">
+Joel ❤️ Amanda
+</div>
+
+<ul>
+<li><a href="index.html">Home</a></li>
+<li><a href="story.html">Story</a></li>
+<li><a href="gallery.html">Gallery</a></li>
+<li><a href="letter.html">Letter</a></li>
+</ul>
+
+</nav>
+
+<section class="hero">
+
+<h1>
+Our Love Story ❤️
+</h1>
+
+<p>
+A connection that turned ordinary moments into unforgettable memories.
+</p>
+
+</section>
+
+<section class="story-section">
+
+<div class="story-grid">
+
+<div class="story-card">
+
+<h2>
+How It Started 💕
+</h2>
+
+<p>
+Sometimes life unexpectedly places someone special into your world.
+A simple interaction slowly became something meaningful,
+comfortable and unforgettable.
+</p>
+
+</div>
+
+<div class="story-card">
+
+<h2>
+Favorite Moments ❤️
+</h2>
+
+<p>
+Every conversation, every smile and every memory became something worth keeping forever.
+Some people genuinely make life feel lighter.
+</p>
+
+</div>
+
+<div class="story-card">
+
+<h2>
+Safe Place 💖
+</h2>
+
+<p>
+No matter how stressful or complicated life gets,
+there will always be comfort in this connection.
+</p>
+
+</div>
+
+</div>
+
+<div class="quote">
+“You are my favorite chapter in this life.” ✨
+</div>
+
+</section>
+
+<footer>
+Joel ❤️ Amanda Forever
+</footer>
+
+</body>
+</html>
